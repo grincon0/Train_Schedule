@@ -70,5 +70,5 @@ database.ref().on("child_added", function (childSnapshot) {
         arrivalTime = moment().add(minutes, "m").format("hh:mm A");
     }
 
-    $("#parent-tab").append(`<span><tr><td>${tName}</td><td>${tPlace}</td><td>${tFreq}</td><td>${arrivalTime}</td></tr></span>`);
+    $("#parent-tab").append(`<tr class="row text-dark"><td class="col">${tName}</td><td class="col">${tPlace}</td><td class="col">${tFreq}</td><td class="col">${arrivalTime}</td><td class="col">${minutes}</td></tr>`);
 });
