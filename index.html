@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
 
 </head>
 
@@ -28,8 +35,8 @@
             <div class="col">
                 <div class="card text-center text-white bg-primary mb-3">
                     <div class="card-header text-left">Current Train Schedule</div>
-                    <div class="card-body text-white">
-                        <div class="container bg-test rounded">
+                    <div class="card-body">
+                        <div id="parent-tab" class="container bg-test rounded">
                             <div class="row text-dark ">
                                 <div class="col font-weight-bold">
                                     <p>Train Name</p>
@@ -64,19 +71,19 @@
                         <form>
                             <div class="form-group text-left">
                                 <label for="train-input">Train Name</label>
-                                <input type="text" class="form-control" id="train-input" placeholder="Example input">
+                                <input type="text" class="form-control" id="train-input" >
                             </div>
                             <div class="form-group text-left">
                                 <label for="destination-input">Destination</label>
-                                <input type="text" class="form-control" id="destination-input" placeholder="Another input">
+                                <input type="text" class="form-control" id="destination-input">
                             </div>
                             <div class="form-group text-left">
                                 <label for="first-input">First Train Time (HH:mm - military time)</label>
-                                <input type="text" class="form-control" id="first-input" placeholder="Another input">
+                                <input type="text" class="form-control" id="first-input" >
                             </div>
                             <div class="form-group text-left">
                                 <label for="frequency-input">Frequency (min)</label>
-                                <input type="text" class="form-control" id="frequency-input" placeholder="Another input">
+                                <input type="text" class="form-control" id="frequency-input">
                             </div>
                             <button type="submit" id="add-train" class="btn btn-primary">Add Train!</button>
                         </form>
@@ -85,13 +92,7 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js" defer></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    
     <script src="assets/javascript/app.js"></script>
 </body>
 

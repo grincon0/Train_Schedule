@@ -1,4 +1,13 @@
-
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBxhhepHpp1zgBXphAC9cUFUj5QbfUPrbE",
+    authDomain: "train-1fe0b.firebaseapp.com",
+    databaseURL: "https://train-1fe0b.firebaseio.com",
+    projectId: "train-1fe0b",
+    storageBucket: "train-1fe0b.appspot.com",
+    messagingSenderId: "966658073879"
+  };
+  firebase.initializeApp(config);
 
 const database = firebase.database();
 
@@ -61,6 +70,5 @@ database.ref().on("child_added", function (childSnapshot) {
         arrivalTime = moment().add(minutes, "m").format("hh:mm A");
     }
 
-
-
+    $("#parent-tab").append(`<span><tr><td>${tName}</td><td>${tPlace}</td><td>${tFreq}</td><td>${arrivalTime}</td></tr></span>`);
 });
