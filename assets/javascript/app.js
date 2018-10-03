@@ -1,5 +1,5 @@
   // Initialize Firebase
-  var config = {
+  const config = {
     apiKey: "AIzaSyBxhhepHpp1zgBXphAC9cUFUj5QbfUPrbE",
     authDomain: "train-1fe0b.firebaseapp.com",
     databaseURL: "https://train-1fe0b.firebaseio.com",
@@ -52,12 +52,13 @@ database.ref().on("child_added", function (childSnapshot) {
     let tPlace = csv.place;
     let tTime = csv.tTime;
     let tFreq = csv.freq;
+    let minutes;
+    let arrivalTime;
 
     let milTime = tTime.split(":");
     let convertedTime = moment().hours(milTime[0]).minutes(milTime[1]);
     let maxMo = moment.max(moment(), convertedTime);
-    let minutes;
-    let arrivalTime;
+
 
     if (maxMo === convertedTime) {
         arrivalTime = convertedTime.format("hh:mm A")
